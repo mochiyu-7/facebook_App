@@ -1,0 +1,73 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.bg_pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffe9a7;
+  opacity: 0.4;
+  z-index: -1;
+}
+.Diagonal {
+  background: repeating-linear-gradient(45deg, #ffc107, #ffc107 10px, #ffe9a7 10px, #ffe9a7 50px);
+}
+
+/*=============
+base
+==============*/
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: YuGothic, "游ゴシック体", "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  letter-spacing: 0.025em;
+  line-height: 1.8;
+}
+* {
+  box-sizing: border-box;
+}
+.section {
+  max-width: 1024x;
+  margin: 0 auto;
+  padding: 100px 20px 1000px;
+}
+._a {
+  max-width: 300px;
+  margin: 0 auto;
+}
+._a a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2em 1em;
+  border: 1px solid #222222;
+  background: linear-gradient(to right, #ffffff 50%, #222222 50%);
+  background-size: 200% auto;
+  color: #222222;
+  font-size: 12px;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.3s;
+  position: relative;
+}
+._a a:after {
+  content: "";
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid #222222;
+  border-bottom: 1px solid #222222;
+}
+._a a:hover {
+  color: #ffffff;
+  background-position: -100% 0;
+}

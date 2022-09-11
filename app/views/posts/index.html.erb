@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Posts</h1>
+
+<table>
+  <thead>
+    <tr>
+    <th>名前</th>
+    <th>内容</th>
+    <th>写真</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+      <td><%= post.user.name %></td>
+      <td><%= post.content %>
+      <td><%= image_tag post.picture.url, style:'width:400px;height:240px' if post.picture_url %></td>
+      <td><%= link_to '詳細を確認する', post_path(post.id), class: "btn btn-secondary" %></td>
+      <td><%= link_to 'ポストを編集する', edit_post_path(post.id), data: { confirm: '本当に編集していいですか？' }, class: "btn btn-dark" %>
+      </td>
+      <td><%= link_to 'ポストを削除する', post_path(post.id), method: :delete, data: { confirm: '本当に削除していいですか？' }, class: "btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Post', new_post_path %>
